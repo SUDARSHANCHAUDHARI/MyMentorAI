@@ -1,5 +1,7 @@
 # Progress Tracker
 
+Use this as the source of truth for bootcamp completion. Mark a day complete only after the practice work, journal entry, interview note updates, and mistakes log updates are done.
+
 ## Week 1: REST API and Postman Fundamentals
 
 - [ ] Day 1: API basics and browser Network tab
@@ -48,3 +50,16 @@
 - [ ] Week 2 review
 - [ ] Week 3 review
 - [ ] Week 4 review
+
+## Portfolio Milestones
+
+- [ ] Repo has clear README and learning structure
+- [ ] First Postman collection exported to `postman/`
+- [ ] Postman environment exported to `postman/`
+- [ ] Newman runs from the command line
+- [ ] GitHub Actions runs Newman
+- [ ] Playwright API project created
+- [ ] CRUD tests automated in Playwright
+- [ ] Negative tests included
+- [ ] Final project README explains setup, run, and test
+- [ ] Repo is ready to show publicly

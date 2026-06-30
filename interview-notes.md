@@ -2,6 +2,16 @@
 
 Add short, practical explanations as concepts come up.
 
+Use this format:
+
+```text
+Concept:
+Plain English:
+Example:
+Common mistake:
+Interview answer:
+```
+
 ## Core Concepts
 
 ### 401 vs 403
@@ -29,3 +39,16 @@ OAuth 2.0 is an authorization framework used to grant access without sharing pas
 ### Rate Limiting
 
 Rate limiting controls how many requests a client can make in a time window.
+
+## Questions To Practice
+
+- What happens when an API returns `500` for a bad client request?
+- Why should API tests include negative scenarios?
+- What is the difference between validation and verification in API testing?
+- Why is schema validation useful?
+- What makes an API test flaky?
+- How do you decide which API tests should run in CI?
+- What should be mocked and what should be tested against a real service?
+- How do you test pagination?
+- How do you test authorization beyond just login?
+- How do you explain an API bug clearly to a developer?
