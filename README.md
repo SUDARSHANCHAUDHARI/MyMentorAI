@@ -39,13 +39,15 @@ Questions:
 
 Recommended daily flow:
 
-1. Read the day plan in `docs/30-day-curriculum.md`.
+1. Read the day plan in `docs/day-XX.md` or the overview in `docs/30-day-curriculum.md`.
 2. Do the practice task.
-3. Update `journal.md`.
-4. Add useful concepts to `interview-notes.md`.
-5. Add mistakes or confusion to `mistakes.md`.
-6. Mark progress in `progress.md`.
-7. Send the daily check-in message from `docs/day-check-in-template.md`.
+3. Answer the quiz in `docs/quizzes/`.
+4. Check your answers in `docs/answers/`.
+5. Update `journal.md`.
+6. Add useful concepts to `interview-notes.md`.
+7. Add mistakes or confusion to `mistakes.md`.
+8. Mark progress in `progress.md`.
+9. Send the daily check-in message from `docs/day-check-in-template.md`.
 
 ## Repository Structure
 
@@ -70,14 +72,19 @@ MyMentorAI/
 ## Key Docs
 
 - `docs/30-day-curriculum.md`: detailed daily roadmap
+- `docs/day-01.md` to `docs/day-07.md`: detailed Week 1 lessons
+- `docs/quizzes/`: daily quiz questions
+- `docs/answers/`: quiz answer keys
 - `docs/day-check-in-template.md`: message template after each lesson
+- `docs/mentor-prompts.md`: prompts for lesson review, debugging, and interview practice
 - `docs/mentor-review-rubric.md`: how each day will be reviewed
 - `docs/coverage-strategy.md`: how to choose useful API test coverage
 - `docs/glossary.md`: API testing terminology
 - `docs/resources.md`: recommended APIs and tools
-- `docs/day-01.md`: detailed first lesson
+- `docs/interview-question-bank.md`: growing interview prep notebook
 - `docs/graduation-project.md`: final portfolio project requirements
 - `docs/weekly-review-template.md`: weekly review questions
+- `postman/collection-plan.md`: Week 1 Postman collection blueprint
 
 ## Practice APIs
 
