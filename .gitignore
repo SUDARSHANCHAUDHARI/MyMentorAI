@@ -1,0 +1,30 @@
+# Secrets and local config
+.env
+.env.*
+*.key
+*.pem
+*.p12
+*.keystore
+local.properties
+
+# Node and Playwright output
+node_modules/
+playwright-report/
+test-results/
+coverage/
+
+# Package manager noise
+.pnpm-store/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS and editor files
+.DS_Store
+.idea/
+.vscode/
+
+# Temporary files
+tmp/
+temp/
+*.log
