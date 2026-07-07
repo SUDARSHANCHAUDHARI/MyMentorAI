@@ -18,7 +18,7 @@ Build a real API testing portfolio project while learning:
 
 ## Current Status
 
-This repo is ready for Day 1.
+Week 1 curriculum is scaffolded and ready for practice. Week 2 practical API testing lessons are also planned so the bootcamp can continue after the first Postman mini project.
 
 No tool installation is required yet. Postman, Newman, Playwright, and GitHub Actions setup will be added when the bootcamp reaches those topics.
 
@@ -72,7 +72,7 @@ MyMentorAI/
 ## Key Docs
 
 - `docs/30-day-curriculum.md`: detailed daily roadmap
-- `docs/day-01.md` to `docs/day-07.md`: detailed Week 1 lessons
+- `docs/day-01.md` to `docs/day-14.md`: detailed Week 1 and Week 2 lessons
 - `docs/quizzes/`: daily quiz questions
 - `docs/answers/`: quiz answer keys
 - `docs/day-check-in-template.md`: message template after each lesson
