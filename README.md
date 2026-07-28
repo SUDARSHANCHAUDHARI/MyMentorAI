@@ -127,7 +127,7 @@ The final project should be good enough to share with a hiring manager or link f
 ### Prerequisites
 
 - Node.js 20 or later
-- npm
+- pnpm
 - Internet access to call the public DummyJSON API
 - Postman is optional if you want to inspect or edit the collection visually
 
@@ -136,7 +136,7 @@ The final project should be good enough to share with a hiring manager or link f
 ```bash
 git clone https://github.com/SUDARSHANCHAUDHARI/MyMentorAI.git
 cd MyMentorAI
-npm install
+pnpm install
 ```
 
 ## Run
@@ -144,19 +144,19 @@ npm install
 Run all seven requests and their assertions:
 
 ```bash
-npm run test:api
+ppnpm test:api
 ```
 
 Generate CLI output and a JUnit report at `reports/api-results.xml`:
 
 ```bash
-npm run test:api:report
+ppnpm test:api:report
 ```
 
 Run the first Playwright Users API flow:
 
 ```bash
-npm run test:playwright-api
+ppnpm test:playwright-api
 ```
 
 The runnable assets are:

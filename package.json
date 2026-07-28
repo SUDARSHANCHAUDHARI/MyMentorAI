@@ -11,5 +11,6 @@
   "devDependencies": {
     "@playwright/test": "^1.55.0",
     "newman": "^6.2.1"
-  }
+  },
+  "packageManager": "pnpm@10.34.0"
 }
