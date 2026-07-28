@@ -9,6 +9,7 @@ local.properties
 
 # Node and Playwright output
 node_modules/
+reports/
 playwright-report/
 test-results/
 coverage/

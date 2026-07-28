@@ -1,25 +1,21 @@
 # Postman Workspace
 
-Store Postman exports here as the bootcamp progresses.
+This folder contains the runnable DummyJSON Postman project and the original
+Week 1 collection plan.
 
-## Planned Files
+## Files
 
 ```text
 postman/
   collections/
+    MyMentorAI.postman_collection.json
   environments/
+    MyMentorAI.postman_environment.json
   README.md
 ```
 
-## Naming Convention
-
-Use clear names:
-
-```text
-api-testing-bootcamp-day-07.postman_collection.json
-dummyjson-local.postman_environment.json
-final-project.postman_collection.json
-```
+Run the collection from the repository root with `npm run test:api`. You can
+also import both JSON files into Postman and use the Collection Runner.
 
 ## Export Rule
 
@@ -33,11 +29,11 @@ Before exporting:
 
 ## Collection Quality Checklist
 
-- [ ] Uses `base_url` variable
-- [ ] Has clear folder names
-- [ ] Has positive scenarios
-- [ ] Has negative scenarios
-- [ ] Has assertions beyond status code
-- [ ] Does not contain secrets
-- [ ] Can run through Collection Runner
-- [ ] Can later run through Newman
+- [x] Uses a `baseUrl` variable
+- [x] Has clear folder names
+- [x] Has positive scenarios
+- [x] Has a negative scenario
+- [x] Has assertions beyond status code
+- [x] Does not contain secrets
+- [x] Can run through Collection Runner
+- [x] Can run through Newman

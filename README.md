@@ -1,6 +1,7 @@
 # MyMentorAI
 
-Personal AI mentorship workspace for building API testing skills through a practical, portfolio-first bootcamp.
+Personal API testing mentorship workspace with practical lessons and a small,
+runnable Postman project.
 
 This repo is designed to work like a real mentorship project, not a folder of course notes. Each day should leave behind evidence: notes, examples, mistakes, interview explanations, and eventually runnable API tests.
 
@@ -18,13 +19,13 @@ Build a real API testing portfolio project while learning:
 
 ## Current Status
 
-Week 1 curriculum is scaffolded and ready for practice. Week 2 practical API testing lessons are also planned so the bootcamp can continue after the first Postman mini project.
-
-No tool installation is required yet. Postman, Newman, Playwright, and GitHub Actions setup will be added when the bootcamp reaches those topics.
+The learning curriculum remains available in `docs/`. The repository now also
+contains seven real API requests against DummyJSON, meaningful Postman
+assertions, Newman command-line execution, and a simple GitHub Actions workflow.
 
 ## Bootcamp Rhythm
 
-Daily target: 60-90 minutes.
+Daily target: 90–120 minutes.
 
 After each lesson, record:
 
@@ -54,8 +55,8 @@ Recommended daily flow:
 ```text
 MyMentorAI/
   postman/
-    collections/           Exported Postman collections
-    environments/          Exported Postman environments
+    collections/           Runnable DummyJSON Postman collection
+    environments/          Environment used by Postman and Newman
   playwright-api-tests/
     clients/               Future API clients
     config/                Future test config
@@ -122,39 +123,49 @@ The final project should be good enough to share with a hiring manager or link f
 
 ## Setup
 
-For Day 1-14, use:
+### Prerequisites
 
-- Browser DevTools
-- Postman
-- Public practice APIs
-- This repo for notes and exported collections
+- Node.js 20 or later
+- npm
+- Internet access to call the public DummyJSON API
+- Postman is optional if you want to inspect or edit the collection visually
 
-For Day 15 onward, this repo will add:
+### Install
 
-- Newman CLI
-- Playwright API testing
-- GitHub Actions
+```bash
+git clone https://github.com/SUDARSHANCHAUDHARI/MyMentorAI.git
+cd MyMentorAI
+npm install
+```
 
 ## Run
 
-There is nothing to run yet.
-
-Later commands will be added here, for example:
+Run all seven requests and their assertions:
 
 ```bash
-# Future Newman example
-npm run test:postman
-
-# Future Playwright example
 npm run test:api
 ```
 
-## Test
-
-Current verification is documentation-based:
+Generate CLI output and a JUnit report at `reports/api-results.xml`:
 
 ```bash
-git status -sb
+npm run test:api:report
 ```
 
-Once automation starts, this section will include Newman and Playwright commands.
+The runnable assets are:
+
+- `postman/collections/MyMentorAI.postman_collection.json`
+- `postman/environments/MyMentorAI.postman_environment.json`
+
+After execution, inspect:
+
+- Which request and assertion names passed or failed in the Newman summary.
+- How `Get all users` stores `userId` for `Get one user`.
+- How `Get all products` stores `productId` for `Get one product`.
+- How the invalid user request checks a real `404` error response.
+- How `searchTerm` changes the product search without editing the request URL.
+
+## What to Study Next
+
+The current next phase is Playwright API automation: recreate a small part of
+this collection as code-based tests while keeping the same focused assertions.
