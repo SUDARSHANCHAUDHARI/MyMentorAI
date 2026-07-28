@@ -43,3 +43,23 @@ test('logs in and gets the authenticated user', async ({ request }) => {
   expect(typeof profile.email).toBe('string');
   expect(profile.email).toContain('@');
 });
+
+test('rejects an invalid password without returning a token', async ({ request }) => {
+  const loginStartedAt = Date.now();
+  const loginResponse = await request.post('/auth/login', {
+    data: {
+      username: demoUser.username,
+      password: 'definitely-wrong',
+    },
+  });
+  const loginDuration = Date.now() - loginStartedAt;
+
+  expect(loginResponse.status()).toBe(400);
+  expect(loginResponse.headers()['content-type']).toContain('application/json');
+  expect(loginDuration).toBeLessThan(3_000);
+
+  const error = await loginResponse.json();
+  expect(typeof error.message).toBe('string');
+  expect(error.message).toBe('Invalid credentials');
+  expect(error).not.toHaveProperty('accessToken');
+});
