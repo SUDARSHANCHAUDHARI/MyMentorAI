@@ -20,8 +20,8 @@ Build a real API testing portfolio project while learning:
 ## Current Status
 
 The learning curriculum remains available in `docs/`. The repository now also
-contains seven real API requests against DummyJSON, meaningful Postman
-assertions, Newman command-line execution, and a simple GitHub Actions workflow.
+contains seven real Postman requests against DummyJSON, Newman command-line
+execution, a simple GitHub Actions workflow, and one Playwright Users API flow.
 
 ## Bootcamp Rhythm
 
@@ -58,11 +58,8 @@ MyMentorAI/
     collections/           Runnable DummyJSON Postman collection
     environments/          Environment used by Postman and Newman
   playwright-api-tests/
-    clients/               Future API clients
-    config/                Future test config
-    data/                  Future test data
-    tests/                 Future Playwright API specs
-    utils/                 Future test helpers
+    playwright.config.ts   Minimal Playwright API configuration
+    tests/users.spec.ts    First chained Users API flow
   docs/                    Curriculum, reviews, rubrics, and project notes
   journal.md               Daily learning journal
   progress.md              30-day checklist and milestones
@@ -152,10 +149,17 @@ Generate CLI output and a JUnit report at `reports/api-results.xml`:
 npm run test:api:report
 ```
 
+Run the first Playwright Users API flow:
+
+```bash
+npm run test:playwright-api
+```
+
 The runnable assets are:
 
 - `postman/collections/MyMentorAI.postman_collection.json`
 - `postman/environments/MyMentorAI.postman_environment.json`
+- `playwright-api-tests/tests/users.spec.ts`
 
 After execution, inspect:
 
@@ -167,5 +171,6 @@ After execution, inspect:
 
 ## What to Study Next
 
-The current next phase is Playwright API automation: recreate a small part of
-this collection as code-based tests while keeping the same focused assertions.
+Inspect how `users.spec.ts` carries an ID between two requests. The next phase
+is Playwright authentication, but it should be added only after this flow is
+understood and can be explained clearly.
