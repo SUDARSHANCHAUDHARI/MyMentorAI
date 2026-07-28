@@ -1,7 +1,7 @@
 # Playwright API Tests
 
-This folder contains the first code-based DummyJSON API flow. The test fetches
-the users list, stores the first returned ID, and fetches that user by ID.
+This folder contains two small code-based DummyJSON API flows: a chained Users
+lookup and an authenticated current-user request.
 
 ## Current Structure
 
@@ -9,6 +9,7 @@ the users list, stores the first returned ID, and fetches that user by ID.
 playwright-api-tests/
   playwright.config.ts
   tests/
+    auth.spec.ts
     users.spec.ts
 ```
 
@@ -27,5 +28,9 @@ playwright-api-tests/
 npm run test:playwright-api
 ```
 
-The flow checks both response status codes, JSON content types, important body
-fields, the chained user ID, and a three-second response-time threshold.
+The tests check response status codes, JSON content types, important body
+fields, request chaining, and a three-second response-time threshold.
+
+`auth.spec.ts` uses DummyJSON's published demo account. It stores the returned
+access token only in memory for that test and sends it directly to `/auth/me`;
+no real credentials or tokens are committed.

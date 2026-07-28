@@ -21,7 +21,8 @@ Build a real API testing portfolio project while learning:
 
 The learning curriculum remains available in `docs/`. The repository now also
 contains seven real Postman requests against DummyJSON, Newman command-line
-execution, a simple GitHub Actions workflow, and one Playwright Users API flow.
+execution, a simple GitHub Actions workflow, and two focused Playwright flows
+covering user chaining and authentication.
 
 ## Bootcamp Rhythm
 
@@ -59,6 +60,7 @@ MyMentorAI/
     environments/          Environment used by Postman and Newman
   playwright-api-tests/
     playwright.config.ts   Minimal Playwright API configuration
+    tests/auth.spec.ts     Login and current-user token flow
     tests/users.spec.ts    First chained Users API flow
   docs/                    Curriculum, reviews, rubrics, and project notes
   journal.md               Daily learning journal
@@ -159,6 +161,7 @@ The runnable assets are:
 
 - `postman/collections/MyMentorAI.postman_collection.json`
 - `postman/environments/MyMentorAI.postman_environment.json`
+- `playwright-api-tests/tests/auth.spec.ts`
 - `playwright-api-tests/tests/users.spec.ts`
 
 After execution, inspect:
@@ -171,6 +174,6 @@ After execution, inspect:
 
 ## What to Study Next
 
-Inspect how `users.spec.ts` carries an ID between two requests. The next phase
-is Playwright authentication, but it should be added only after this flow is
-understood and can be explained clearly.
+Inspect how `auth.spec.ts` carries the login token into `/auth/me` without
+logging or persisting it. Before adding more automation, explain the difference
+between credentials, access tokens, authentication, and authorization.
