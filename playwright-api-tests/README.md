@@ -1,16 +1,15 @@
 # Playwright API Tests
 
-This folder will contain code-based API automation when the bootcamp reaches Week 3.
+This folder contains the first code-based DummyJSON API flow. The test fetches
+the users list, stores the first returned ID, and fetches that user by ID.
 
-## Planned Structure
+## Current Structure
 
 ```text
 playwright-api-tests/
-  clients/
-  config/
-  data/
+  playwright.config.ts
   tests/
-  utils/
+    users.spec.ts
 ```
 
 ## Test Design Rules
@@ -22,11 +21,11 @@ playwright-api-tests/
 - Add negative tests for important failure paths.
 - Make failures easy to understand from CI logs.
 
-## Future Commands
-
-These will be added after Playwright is installed:
+## Run
 
 ```bash
-npm run test:api
-npm run test:api:headed
+npm run test:playwright-api
 ```
+
+The flow checks both response status codes, JSON content types, important body
+fields, the chained user ID, and a three-second response-time threshold.
