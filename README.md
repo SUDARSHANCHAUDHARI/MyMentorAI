@@ -22,7 +22,8 @@ Build a real API testing portfolio project while learning:
 The learning curriculum remains available in `docs/`. The repository now also
 contains seven real Postman requests against DummyJSON, Newman command-line
 execution, a simple GitHub Actions workflow, and focused Playwright coverage
-for user chaining plus positive and negative authentication.
+for user chaining, positive and negative authentication, and product CRUD-style
+operations.
 
 ## Bootcamp Rhythm
 
@@ -61,6 +62,7 @@ MyMentorAI/
   playwright-api-tests/
     playwright.config.ts   Minimal Playwright API configuration
     tests/auth.spec.ts     Login and current-user token flow
+    tests/products.spec.ts Product create/read/update/delete-style flow
     tests/users.spec.ts    First chained Users API flow
   docs/                    Curriculum, reviews, rubrics, and project notes
   journal.md               Daily learning journal
@@ -162,6 +164,7 @@ The runnable assets are:
 - `postman/collections/MyMentorAI.postman_collection.json`
 - `postman/environments/MyMentorAI.postman_environment.json`
 - `playwright-api-tests/tests/auth.spec.ts`
+- `playwright-api-tests/tests/products.spec.ts`
 - `playwright-api-tests/tests/users.spec.ts`
 
 After execution, inspect:
@@ -174,6 +177,7 @@ After execution, inspect:
 
 ## What to Study Next
 
-Compare the successful and failed login tests in `auth.spec.ts`: one receives a
-token and reaches `/auth/me`, while the other receives a useful `400` error and
-no token. Before adding more automation, explain why both paths matter.
+Inspect why `products.spec.ts` cannot fetch its newly created product:
+DummyJSON returns realistic mutation responses but does not persist changes.
+Explain how a real API would require isolated test data and cleanup before
+adding any framework layers.
