@@ -21,8 +21,8 @@ Build a real API testing portfolio project while learning:
 
 The learning curriculum remains available in `docs/`. The repository now also
 contains seven real Postman requests against DummyJSON, Newman command-line
-execution, a simple GitHub Actions workflow, and two focused Playwright flows
-covering user chaining and authentication.
+execution, a simple GitHub Actions workflow, and focused Playwright coverage
+for user chaining plus positive and negative authentication.
 
 ## Bootcamp Rhythm
 
@@ -174,6 +174,6 @@ After execution, inspect:
 
 ## What to Study Next
 
-Inspect how `auth.spec.ts` carries the login token into `/auth/me` without
-logging or persisting it. Before adding more automation, explain the difference
-between credentials, access tokens, authentication, and authorization.
+Compare the successful and failed login tests in `auth.spec.ts`: one receives a
+token and reaches `/auth/me`, while the other receives a useful `400` error and
+no token. Before adding more automation, explain why both paths matter.

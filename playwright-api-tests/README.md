@@ -1,7 +1,7 @@
 # Playwright API Tests
 
-This folder contains two small code-based DummyJSON API flows: a chained Users
-lookup and an authenticated current-user request.
+This folder contains small code-based DummyJSON API flows: a chained Users
+lookup plus positive and negative authentication coverage.
 
 ## Current Structure
 
@@ -33,4 +33,5 @@ fields, request chaining, and a three-second response-time threshold.
 
 `auth.spec.ts` uses DummyJSON's published demo account. It stores the returned
 access token only in memory for that test and sends it directly to `/auth/me`;
-no real credentials or tokens are committed.
+no real credentials or tokens are committed. Its negative test confirms an
+invalid password returns `400`, a useful error message, and no access token.
