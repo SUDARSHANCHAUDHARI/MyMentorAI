@@ -2,7 +2,7 @@
 
 This curriculum is built for someone with strong QA and automation experience. The focus is not memorizing definitions; the focus is building working judgment.
 
-Daily target: 60-90 minutes.
+Daily target: 90–120 minutes.
 
 ## Week 1: REST API and Postman Fundamentals
 

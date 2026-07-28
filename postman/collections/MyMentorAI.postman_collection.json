@@ -1,0 +1,354 @@
+{
+  "info": {
+    "_postman_id": "bfc0a88c-55d1-4fbd-b3cb-e73fda9e4a22",
+    "name": "MyMentorAI",
+    "description": "A small, runnable DummyJSON collection for learning API testing with Postman and Newman.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "event": [
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "exec": [
+          "pm.test('Response is JSON', function () {",
+          "    pm.expect(pm.response.headers.get('Content-Type')).to.include('application/json');",
+          "    pm.expect(function () { pm.response.json(); }).not.to.throw();",
+          "});",
+          "",
+          "pm.test('Response time is under 3000 ms', function () {",
+          "    pm.expect(pm.response.responseTime).to.be.below(3000);",
+          "});"
+        ]
+      }
+    }
+  ],
+  "item": [
+    {
+      "name": "Users",
+      "item": [
+        {
+          "name": "Get all users",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "const body = pm.response.json();",
+                  "",
+                  "pm.test('Status code is 200', function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});",
+                  "",
+                  "pm.test('Users list is not empty', function () {",
+                  "    pm.expect(body.users).to.be.an('array').that.is.not.empty;",
+                  "});",
+                  "",
+                  "pm.test('First user has a numeric ID and a name', function () {",
+                  "    pm.expect(body.users[0].id).to.be.a('number');",
+                  "    pm.expect(body.users[0].firstName).to.be.a('string').and.not.empty;",
+                  "});",
+                  "",
+                  "if (body.users && body.users.length > 0) {",
+                  "    pm.environment.set('userId', body.users[0].id);",
+                  "}"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/users",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "users"
+              ]
+            },
+            "description": "Fetches users and stores the first returned ID in userId for the next request."
+          }
+        },
+        {
+          "name": "Get one user",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "const body = pm.response.json();",
+                  "",
+                  "pm.test('Status code is 200', function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});",
+                  "",
+                  "pm.test('Returned user matches userId', function () {",
+                  "    pm.expect(body.id).to.equal(Number(pm.environment.get('userId')));",
+                  "});",
+                  "",
+                  "pm.test('User has a name and email', function () {",
+                  "    pm.expect(body.firstName).to.be.a('string').and.not.empty;",
+                  "    pm.expect(body.email).to.be.a('string').and.include('@');",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/users/{{userId}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "users",
+                "{{userId}}"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Create user",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "const body = pm.response.json();",
+                  "",
+                  "pm.test('Status code is 201', function () {",
+                  "    pm.response.to.have.status(201);",
+                  "});",
+                  "",
+                  "pm.test('Created user keeps the submitted name', function () {",
+                  "    pm.expect(body.firstName).to.equal('Mentor');",
+                  "    pm.expect(body.lastName).to.equal('Learner');",
+                  "});",
+                  "",
+                  "pm.test('Created user has a numeric ID', function () {",
+                  "    pm.expect(body.id).to.be.a('number');",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"firstName\": \"Mentor\",\n  \"lastName\": \"Learner\",\n  \"age\": 30\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/users/add",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "users",
+                "add"
+              ]
+            },
+            "description": "DummyJSON simulates creation and returns a generated ID without persisting the user."
+          }
+        },
+        {
+          "name": "Invalid user ID",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "const body = pm.response.json();",
+                  "",
+                  "pm.test('Status code is 404', function () {",
+                  "    pm.response.to.have.status(404);",
+                  "});",
+                  "",
+                  "pm.test('Error response has a message', function () {",
+                  "    pm.expect(body.message).to.be.a('string').and.not.empty;",
+                  "});",
+                  "",
+                  "pm.test('Error identifies the missing user', function () {",
+                  "    pm.expect(body.message).to.include('999999');",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/users/999999",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "users",
+                "999999"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Products",
+      "item": [
+        {
+          "name": "Get all products",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "const body = pm.response.json();",
+                  "",
+                  "pm.test('Status code is 200', function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});",
+                  "",
+                  "pm.test('Products list is not empty', function () {",
+                  "    pm.expect(body.products).to.be.an('array').that.is.not.empty;",
+                  "});",
+                  "",
+                  "pm.test('First product has a numeric ID and title', function () {",
+                  "    pm.expect(body.products[0].id).to.be.a('number');",
+                  "    pm.expect(body.products[0].title).to.be.a('string').and.not.empty;",
+                  "});",
+                  "",
+                  "if (body.products && body.products.length > 0) {",
+                  "    pm.environment.set('productId', body.products[0].id);",
+                  "}"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/products",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "products"
+              ]
+            },
+            "description": "Fetches products and stores the first returned ID in productId for the next request."
+          }
+        },
+        {
+          "name": "Get one product",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "const body = pm.response.json();",
+                  "",
+                  "pm.test('Status code is 200', function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});",
+                  "",
+                  "pm.test('Returned product matches productId', function () {",
+                  "    pm.expect(body.id).to.equal(Number(pm.environment.get('productId')));",
+                  "});",
+                  "",
+                  "pm.test('Product has a title and numeric price', function () {",
+                  "    pm.expect(body.title).to.be.a('string').and.not.empty;",
+                  "    pm.expect(body.price).to.be.a('number');",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/products/{{productId}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "products",
+                "{{productId}}"
+              ]
+            }
+          }
+        },
+        {
+          "name": "Search products",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "const body = pm.response.json();",
+                  "",
+                  "pm.test('Status code is 200', function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});",
+                  "",
+                  "pm.test('Search returns at least one product', function () {",
+                  "    pm.expect(body.products).to.be.an('array').that.is.not.empty;",
+                  "    pm.expect(body.total).to.be.above(0);",
+                  "});",
+                  "",
+                  "pm.test('Search result has a numeric ID and title', function () {",
+                  "    pm.expect(body.products[0].id).to.be.a('number');",
+                  "    pm.expect(body.products[0].title).to.be.a('string').and.not.empty;",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/products/search?q={{searchTerm}}",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "products",
+                "search"
+              ],
+              "query": [
+                {
+                  "key": "q",
+                  "value": "{{searchTerm}}"
+                }
+              ]
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

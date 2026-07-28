@@ -1,0 +1,13 @@
+{
+  "name": "mymentorai",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Runnable Postman API tests for the MyMentorAI API testing bootcamp.",
+  "scripts": {
+    "test:api": "newman run postman/collections/MyMentorAI.postman_collection.json -e postman/environments/MyMentorAI.postman_environment.json",
+    "test:api:report": "newman run postman/collections/MyMentorAI.postman_collection.json -e postman/environments/MyMentorAI.postman_environment.json -r cli,junit --reporter-junit-export reports/api-results.xml"
+  },
+  "devDependencies": {
+    "newman": "^6.2.1"
+  }
+}
