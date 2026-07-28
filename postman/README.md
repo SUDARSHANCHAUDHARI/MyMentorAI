@@ -14,7 +14,7 @@ postman/
   README.md
 ```
 
-Run the collection from the repository root with `npm run test:api`. You can
+Run the collection from the repository root with `ppnpm test:api`. You can
 also import both JSON files into Postman and use the Collection Runner.
 
 ## Export Rule

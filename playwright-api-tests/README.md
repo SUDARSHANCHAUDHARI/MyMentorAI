@@ -26,7 +26,7 @@ playwright-api-tests/
 ## Run
 
 ```bash
-npm run test:playwright-api
+ppnpm test:playwright-api
 ```
 
 The tests check response status codes, JSON content types, important body
