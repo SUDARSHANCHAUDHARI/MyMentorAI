@@ -144,19 +144,19 @@ pnpm install
 Run all seven requests and their assertions:
 
 ```bash
-ppnpm test:api
+pnpm test:api
 ```
 
 Generate CLI output and a JUnit report at `reports/api-results.xml`:
 
 ```bash
-ppnpm test:api:report
+pnpm test:api:report
 ```
 
-Run the first Playwright Users API flow:
+Run all Playwright API flows:
 
 ```bash
-ppnpm test:playwright-api
+pnpm test:playwright-api
 ```
 
 The runnable assets are:
@@ -181,3 +181,7 @@ Inspect why `products.spec.ts` cannot fetch its newly created product:
 DummyJSON returns realistic mutation responses but does not persist changes.
 Explain how a real API would require isolated test data and cleanup before
 adding any framework layers.
+
+## License
+
+This project is available under the [MIT License](LICENSE).
