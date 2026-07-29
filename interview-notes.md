@@ -40,6 +40,20 @@ OAuth 2.0 is an authorization framework used to grant access without sharing pas
 
 Rate limiting controls how many requests a client can make in a time window.
 
+## 60-Second Project Explanation
+
+MyMentorAI is a portfolio API testing project built against DummyJSON. It has a
+small Postman collection with seven requests and 35 focused assertions, which I
+run from the command line with Newman. I then automated four flows with
+Playwright: user request chaining, successful authentication, invalid login,
+and CRUD-style product operations. The tests validate status codes, JSON
+content types, important response fields, data types, negative behavior, and
+response-time thresholds. GitHub Actions installs dependencies with a frozen
+pnpm lockfile and runs both suites on pull requests and pushes to `main`. One
+important limitation is that DummyJSON simulates mutations without persisting
+them, so I verify the returned contracts and would use isolated data plus
+cleanup against a real writable API.
+
 ## Questions To Practice
 
 - What happens when an API returns `500` for a bad client request?

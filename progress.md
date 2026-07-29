@@ -53,13 +53,13 @@ Use this as the source of truth for bootcamp completion. Mark a day complete onl
 
 ## Portfolio Milestones
 
-- [ ] Repo has clear README and learning structure
-- [ ] First Postman collection exported to `postman/`
-- [ ] Postman environment exported to `postman/`
-- [ ] Newman runs from the command line
-- [ ] GitHub Actions runs Newman
-- [ ] Playwright API project created
-- [ ] CRUD tests automated in Playwright
-- [ ] Negative tests included
-- [ ] Final project README explains setup, run, and test
-- [ ] Repo is ready to show publicly
+- [x] Repo has clear README and learning structure
+- [x] First Postman collection exported to `postman/`
+- [x] Postman environment exported to `postman/`
+- [x] Newman runs from the command line
+- [x] GitHub Actions runs Newman
+- [x] Playwright API project created
+- [x] CRUD tests automated in Playwright
+- [x] Negative tests included
+- [x] Final project README explains setup, run, and test
+- [x] Repo is ready to show publicly
