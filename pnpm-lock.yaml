@@ -4,6 +4,16 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+overrides:
+  flatted: 3.4.2
+  handlebars: 4.7.9
+  jose: 4.15.5
+  lodash: 4.18.0
+  node-forge: 1.4.0
+  qs: 6.15.2
+  underscore: 1.13.8
+  uuid: 11.1.1
+
 importers:
 
   .:
@@ -197,8 +207,8 @@ packages:
     resolution: {integrity: sha512-ryBwPIIeErmxgPnm6cbESAzXjuEFubs+yKYLBZvg3CaiNcmkJChoOGcBSrZ6IwkMwPABwPpVXE6IlNdGJJrvEg==}
     engines: {node: '>= 10.4.0'}
 
-  flatted@3.2.6:
-    resolution: {integrity: sha512-0sQoMh9s0BYsm+12Huy/rkKxVu4R1+r96YX5cG44rHV0pQ6iC3Q+mkoMFaGWObMFYQxCVT+ssG1ksneA2MI9KQ==}
+  flatted@3.4.2:
+    resolution: {integrity: sha512-PjDse7RzhcPkIJwy5t7KPWQSZ9cAbzQXcafsetQoD7sOJRQlGikNbx7yZp2OotDnJyrDcbyRq3Ttb18iYOqkxA==}
 
   forever-agent@0.6.1:
     resolution: {integrity: sha512-j0KLYPhm6zeac4lz3oJ3o65qvgQCcPubiyotZrXqEaG4hNagNYO8qdlUrX5vwqv9ohqeT/Z3j6+yW067yWWdUw==}
@@ -226,8 +236,8 @@ packages:
     resolution: {integrity: sha512-ZUKRh6/kUFoAiTAtTYPZJ3hw9wNxx+BIBOijnlG9PnrJsCcSjs1wyyD6vJpaYtgnzDrKYRSqf3OO6Rfa93xsRg==}
     engines: {node: '>= 0.4'}
 
-  handlebars@4.7.8:
-    resolution: {integrity: sha512-vafaFqs8MZkRrSX7sFVUdo3ap/eNiLnb4IakshzvP56X5Nr1iGKAIqdX6tMlm6HcNRIkr6AxO5jFEoJzzpT8aQ==}
+  handlebars@4.7.9:
+    resolution: {integrity: sha512-4E71E0rpOaQuJR2A3xDZ+GM1HyWYv1clR58tC8emQNeQe3RH7MAzSbat+V0wG78LQBo6m6bzSG/L4pBuCsgnUQ==}
     engines: {node: '>=0.4.7'}
     hasBin: true
 
@@ -288,8 +298,8 @@ packages:
   isstream@0.1.2:
     resolution: {integrity: sha512-Yljz7ffyPbrLpLngrMtZ7NduUgVvi6wG9RJ9IUcyCd59YQ911PBJphODUcbOVbqYfxe1wuYf/LJ8PauMRwsM/g==}
 
-  jose@4.14.4:
-    resolution: {integrity: sha512-j8GhLiKmUAh+dsFXlX1aJCbt5KMibuKb+d7j1JaOJG6s2UjX1PQlW+OKB/sD4a/5ZYF4RcmYmLSndOoU3Lt/3g==}
+  jose@4.15.5:
+    resolution: {integrity: sha512-jc7BFxgKPKi94uOvEmzlSWFFe2+vASyXaKUpdQKatWAESU2MWjDfFf0fdfc83CDKcA5QecabZeNLyfhe3yKNkg==}
 
   js-md4@0.3.2:
     resolution: {integrity: sha512-/GDnfQYsltsjRswQhN9fhv3EMw2sCpUdrdxyWDOUK7eyD++r3gRhzgiQgc/x4MAv2i1iuQ4lxO5mvqM3vj4bwA==}
@@ -317,8 +327,9 @@ packages:
     resolution: {integrity: sha512-wUayTU8MS827Dam6MxgD72Ui+KOSF+u/eIqpatOtjnvgJ0+mnDq33uC2M7J0tPK+upe/DpUAuK4JUU89iBoNKQ==}
     engines: {node: '>=4'}
 
-  lodash@4.17.21:
-    resolution: {integrity: sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==}
+  lodash@4.18.0:
+    resolution: {integrity: sha512-l1mfj2atMqndAHI3ls7XqPxEjV2J9ZkcNyHpoZA3r2T1LLwDB69jgkMWh71YKwhBbK0G2f4WSn05ahmQXVxupA==}
+    deprecated: Bad release. Please use lodash@4.17.21 instead.
 
   lru-cache@6.0.0:
     resolution: {integrity: sha512-Jo6dJ04CmSjuznwJSS3pUeWmd/H0ffTlkXXgwZi+eq1UCmqQwCh+eLsYOYCwY991i2Fah4h1BEMCx4qThGbsiA==}
@@ -361,8 +372,8 @@ packages:
     engines: {node: '>=16'}
     hasBin: true
 
-  node-forge@1.3.1:
-    resolution: {integrity: sha512-dPEtOeMvF9VMcYV/1Wb8CPoVAXtp6MKMlcbAt4ddqmGqUJ6fQZFXkNZNkNlfevtNkGtaSoXf/vNNNSvgrdXwtA==}
+  node-forge@1.4.0:
+    resolution: {integrity: sha512-LarFH0+6VfriEhqMMcLX2F7SwSXeWwnEAJEsYm5QKWchiVYVvJyV9v7UDvUv+w5HO23ZpQTXDv/GxdDdMyOuoQ==}
     engines: {node: '>= 6.13.0'}
 
   node-oauth1@1.3.0:
@@ -436,12 +447,8 @@ packages:
     resolution: {integrity: sha512-vYt7UD1U9Wg6138shLtLOvdAu+8DsC/ilFtEVHcH+wydcSpNE20AfSOduf6MkRFahL5FY7X1oU7nKVZFtfq8Fg==}
     engines: {node: '>=6'}
 
-  qs@6.14.2:
-    resolution: {integrity: sha512-V/yCWTTF7VJ9hIh18Ugr2zhJMP01MY7c5kh4J870L7imm6/DIzBsNLTXzMwUA3yZ5b/KBqLx8Kp3uRvd7xSe3Q==}
-    engines: {node: '>=0.6'}
-
-  qs@6.5.5:
-    resolution: {integrity: sha512-mzR4sElr1bfCaPJe7m8ilJ6ZXdDaGoObcYR0ZHSsktM/Lt21MVHj5De30GQH2eiZ1qGRTO7LCAzQsUeXTNexWQ==}
+  qs@6.15.2:
+    resolution: {integrity: sha512-Rzq0KEyX/w/tEybncDgdkZrJgVUsUMk3xjh3t5bv3S1HTAtg+uOYt72+ZfwiQwKdysThkTBdL/rTi6HDmX9Ddw==}
     engines: {node: '>=0.6'}
 
   querystringify@2.2.0:
@@ -535,8 +542,8 @@ packages:
     engines: {node: '>=0.8.0'}
     hasBin: true
 
-  underscore@1.12.1:
-    resolution: {integrity: sha512-hEQt0+ZLDVUMhebKxL4x1BTtDY7bavVofhZ9KZ4aI26X9SRaE+Y3m83XUL1UP2jn8ynjndwCCpEHdUG+9pP1Tw==}
+  underscore@1.13.8:
+    resolution: {integrity: sha512-DXtD3ZtEQzc7M8m4cXotyHR+FAS18C64asBYY5vqZexfYryNNnDc02W4hKg3rdQuqOYas1jkseX0+nZXjTXnvQ==}
 
   universalify@0.2.0:
     resolution: {integrity: sha512-CJ1QgKmNg3CwvAv/kOFmtnEN05f0D/cn9QntgNOQlQF9dgvVTHj3t+8JPdjqawCHk7V/KA+fbUqzZ9XWhcqPUg==}
@@ -548,14 +555,8 @@ packages:
   url-parse@1.5.10:
     resolution: {integrity: sha512-WypcfiRhfeUP9vvF0j6rw0J3hrWrw6iZv3+22h6iRMJ/8z1Tj6XfLP4DsUix5MhMPnXpiHDoKyoZ/bdCkwBCiQ==}
 
-  uuid@3.4.0:
-    resolution: {integrity: sha512-HjSDRw6gZE5JMggctHBcjVak08+KEVhSIiDzFnT9S9aegmp85S/bReBVTb4QTFaRNptJ9kuYaNhnbNEOkbKb/A==}
-    deprecated: uuid@10 and below is no longer supported.  For ESM codebases, update to uuid@latest.  For CommonJS codebases, use uuid@11 (but be aware this version will likely be deprecated in 2028).
-    hasBin: true
-
-  uuid@8.3.2:
-    resolution: {integrity: sha512-+NYs2QeMWy+GWFOEm9xnn6HCDp0l7QBD7ml8zLUmJ+93Q5NF0NocErnwkTkXVFNiX3/fpC6afS8Dhb/gz7R7eg==}
-    deprecated: uuid@10 and below is no longer supported.  For ESM codebases, update to uuid@latest.  For CommonJS codebases, use uuid@11 (but be aware this version will likely be deprecated in 2028).
+  uuid@11.1.1:
+    resolution: {integrity: sha512-vIYxrBCC/N/K+Js3qSN88go7kIfNPssr/hHCesKCQNAjmgvYS2oqr69kIufEG+O4+PfezOH4EbIeHCfFov8ZgQ==}
     hasBin: true
 
   uvm@2.1.1:
@@ -735,7 +736,7 @@ snapshots:
 
   filesize@10.1.4: {}
 
-  flatted@3.2.6: {}
+  flatted@3.4.2: {}
 
   forever-agent@0.6.1: {}
 
@@ -768,7 +769,7 @@ snapshots:
 
   gopd@1.2.0: {}
 
-  handlebars@4.7.8:
+  handlebars@4.7.9:
     dependencies:
       minimist: 1.2.8
       neo-async: 2.6.2
@@ -809,7 +810,7 @@ snapshots:
       des.js: 1.1.0
       httpreq: 1.1.1
       js-md4: 0.3.2
-      underscore: 1.12.1
+      underscore: 1.13.8
 
   httpreq@1.1.1: {}
 
@@ -827,7 +828,7 @@ snapshots:
 
   isstream@0.1.2: {}
 
-  jose@4.14.4: {}
+  jose@4.15.5: {}
 
   js-md4@0.3.2: {}
 
@@ -850,7 +851,7 @@ snapshots:
 
   liquid-json@0.3.1: {}
 
-  lodash@4.17.21: {}
+  lodash@4.18.0: {}
 
   lru-cache@6.0.0:
     dependencies:
@@ -890,7 +891,7 @@ snapshots:
       csv-parse: 4.16.3
       filesize: 10.1.4
       liquid-json: 0.3.1
-      lodash: 4.17.21
+      lodash: 4.18.0
       mkdirp: 3.0.1
       postman-collection: 4.4.0
       postman-collection-transformer: 4.1.8
@@ -904,7 +905,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  node-forge@1.3.1: {}
+  node-forge@1.4.0: {}
 
   node-oauth1@1.3.0: {}
 
@@ -930,7 +931,7 @@ snapshots:
     dependencies:
       commander: 8.3.0
       inherits: 2.0.4
-      lodash: 4.17.21
+      lodash: 4.18.0
       semver: 7.5.4
       strip-json-comments: 3.1.1
 
@@ -941,12 +942,12 @@ snapshots:
       http-reasons: 0.1.0
       iconv-lite: 0.6.3
       liquid-json: 0.3.1
-      lodash: 4.17.21
+      lodash: 4.18.0
       mime-format: 2.0.1
       mime-types: 2.1.35
       postman-url-encoder: 3.0.5
       semver: 7.5.4
-      uuid: 8.3.2
+      uuid: 11.1.1
 
   postman-request@2.88.1-postman.34:
     dependencies:
@@ -968,10 +969,10 @@ snapshots:
       mime-types: 2.1.35
       oauth-sign: 0.9.0
       performance-now: 2.1.0
-      qs: 6.5.5
+      qs: 6.15.2
       safe-buffer: 5.2.1
       stream-length: 1.0.2
-      uuid: 8.3.2
+      uuid: 11.1.1
 
   postman-request@2.88.1-postman.48:
     dependencies:
@@ -990,11 +991,11 @@ snapshots:
       json-stringify-safe: 5.0.1
       mime-types: 2.1.35
       oauth-sign: 0.9.0
-      qs: 6.14.2
+      qs: 6.15.2
       safe-buffer: 5.2.1
       socks-proxy-agent: 8.0.5
       stream-length: 1.0.2
-      uuid: 8.3.2
+      uuid: 11.1.1
     transitivePeerDependencies:
       - supports-color
 
@@ -1003,13 +1004,13 @@ snapshots:
       '@postman/tough-cookie': 4.1.3-postman.1
       async: 3.2.5
       aws4: 1.12.0
-      handlebars: 4.7.8
+      handlebars: 4.7.9
       httpntlm: 1.8.13
-      jose: 4.14.4
+      jose: 4.15.5
       js-sha512: 0.9.0
-      lodash: 4.17.21
+      lodash: 4.18.0
       mime-types: 2.1.35
-      node-forge: 1.3.1
+      node-forge: 1.4.0
       node-oauth1: 1.3.0
       performance-now: 2.1.0
       postman-collection: 4.4.0
@@ -1018,11 +1019,11 @@ snapshots:
       postman-url-encoder: 3.0.5
       serialised-error: 1.1.3
       strip-json-comments: 3.1.1
-      uuid: 8.3.2
+      uuid: 11.1.1
 
   postman-sandbox@4.7.1:
     dependencies:
-      lodash: 4.17.21
+      lodash: 4.18.0
       postman-collection: 4.4.0
       teleport-javascript: 1.0.0
       uvm: 2.1.1
@@ -1041,11 +1042,9 @@ snapshots:
 
   punycode@2.3.1: {}
 
-  qs@6.14.2:
+  qs@6.15.2:
     dependencies:
       side-channel: 1.1.1
-
-  qs@6.5.5: {}
 
   querystringify@2.2.0: {}
 
@@ -1065,7 +1064,7 @@ snapshots:
     dependencies:
       object-hash: 1.3.1
       stack-trace: 0.0.9
-      uuid: 3.4.0
+      uuid: 11.1.1
 
   side-channel-list@1.0.1:
     dependencies:
@@ -1149,7 +1148,7 @@ snapshots:
   uglify-js@3.19.3:
     optional: true
 
-  underscore@1.12.1: {}
+  underscore@1.13.8: {}
 
   universalify@0.2.0: {}
 
@@ -1162,13 +1161,11 @@ snapshots:
       querystringify: 2.2.0
       requires-port: 1.0.0
 
-  uuid@3.4.0: {}
-
-  uuid@8.3.2: {}
+  uuid@11.1.1: {}
 
   uvm@2.1.1:
     dependencies:
-      flatted: 3.2.6
+      flatted: 3.4.2
 
   verror@1.10.0:
     dependencies:
