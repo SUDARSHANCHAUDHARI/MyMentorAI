@@ -9,7 +9,7 @@
     "test:playwright-api": "playwright test -c playwright-api-tests/playwright.config.ts"
   },
   "devDependencies": {
-    "@playwright/test": "^1.55.0",
+    "@playwright/test": "^1.62.1",
     "newman": "^6.2.1"
   },
   "pnpm": {
