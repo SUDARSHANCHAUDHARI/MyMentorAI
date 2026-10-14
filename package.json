@@ -10,7 +10,7 @@
   },
   "devDependencies": {
     "@playwright/test": "^1.55.0",
-    "newman": "^6.2.1"
+    "newman": "^6.2.3"
   },
   "pnpm": {
     "overrides": {
